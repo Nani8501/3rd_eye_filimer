@@ -7,11 +7,14 @@
 }
 
 .main-content{
-    width: 100%;
+    width: 101%;
     margin: 0 auto;
     padding: 0 15px;
     box-sizing: border-box;
     background-color: black;
+    background-image: url("assets/sai neeraj.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;         
     height: 850px;
     color: white;
     display: inline-block;
@@ -21,13 +24,15 @@
     text-align: center;
     font-size: 100px;
     font-family: 'Quantico',sans-serif;
-}
+    text-shadow: 10px 10px 50px #000000, 10px 10px 50px #000000; 
+  }
 .cont-subhead{
     text-align: center;
     font-size: 30px;
     font-family: 'Kalam',sans-serif;
-}
+    text-shadow: 10px 10px 50px #000000, 10px 10px 50px #000000; 
 
+}
 
 .nav{
     position:fixed;
@@ -89,10 +94,7 @@
 
 .services-section{
   min-width: 500px;
-  margin: auto;
-  width: 80%;
-  padding: 0 100px ;
-}
+  padding: 0 50px ;
 }
 
 .row{
@@ -103,6 +105,7 @@
 }
 .row ::after, ::before {
   box-sizing: border-box;
+
 }
 
 .services-item{
@@ -147,5 +150,5 @@
   min-width: 500px;
   margin: auto;
   width: 80%;
-  padding: 0 100px ;
+  padding: 0 20px ;
 }
