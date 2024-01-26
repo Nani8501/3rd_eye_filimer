@@ -12,9 +12,7 @@
     padding: 0 15px;
     box-sizing: border-box;
     background-color: black;
-    background-image: url("assets/sai neeraj.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;         
+    background-image: "assets/sai neeraj.jpg";
     height: 850px;
     color: white;
     display: inline-block;
@@ -24,15 +22,13 @@
     text-align: center;
     font-size: 100px;
     font-family: 'Quantico',sans-serif;
-    text-shadow: 10px 10px 50px #000000, 10px 10px 50px #000000; 
-  }
+}
 .cont-subhead{
     text-align: center;
     font-size: 30px;
     font-family: 'Kalam',sans-serif;
-    text-shadow: 10px 10px 50px #000000, 10px 10px 50px #000000; 
-
 }
+
 
 .nav{
     position:fixed;
