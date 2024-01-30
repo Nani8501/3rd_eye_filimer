@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3rd Eye Filimer</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style1.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,6 +16,13 @@
     />
   </head>
   <body>
+
+    <div class="preloader">
+      <div class="lens left"></div>
+      <div class="lens right"></div>
+      <div class="spinner"></div>
+      <div class="text">Loading...</div>
+    </div>
     <div class="main-container">
       <div class="nav">
         <div class="hamburger" onclick="toggleNav()">
@@ -20,32 +30,51 @@
           <div></div>
           <div></div>
         </div>
+      
+        <!-- Dark mode toggle button
+        <button class="dark-mode-toggle" onclick="toggleTheme()">
+          <div id="switch-toggle" class="w-12 h-12 relative rounded-full transition duration-500 transform bg-yellow-500 -translate-x-2 p-1 text-white">
+            <!-- Dark mode icon will be inserted here -->
+          <!-- </div>
+        </button> --> 
+      
         <ul class="nav-links">
-          <li class="center"><a href="#">Dashboard</a></li>
+          <li class="center"><a href="#">Home</a></li>
           <li class="center"><a href="#">Portfolio</a></li>
           <li class="center"><a href="#container">Services</a></li>
           <li class="center"><a href="#">Feedback</a></li>
         </ul>
       </div>
+      
 
       <div class="min-container">
         <div class="main-content">
           <div class="cont-head">3rd Eye Filimer</div>
           <div class="cont-subhead">
-            Capturing moments is more than just a passion for me; it's an art
-            form that allows me to tell stories through the lens. With a journey
-            that began in 2016, I've honed my skills in various facets of
-            photography, creating a diverse portfolio that reflects my love for
-            visual storytelling.
+
           </div>
         </div>
 
+
+
+        <div class="hero">
+          <div class="pic" data-aos="fade-up"><div class="inpic"><img src="assets/profilepic.jpeg" loading="lazy"/></div></div>
+          <div class="name1" data-aos="fade-up">Sai Neeraj Namani</div>
+          <div class="bio" data-aos="fade-up">Capturing moments is more than just a passion for me
+            it's an art form that allows me to tell stories through the lens. 
+            With a journey that began in 2016, I've honed my skills in various facets of
+            photography, creating a diverse portfolio that reflects my love for
+            visual storytelling.</div>
+        </div>
+
+
+
         <div class="services-section">
-          <div class="container" id="container">
+          <div class="container"  id="container">
             <div class="row">
               <div class="div1">
-                <div class="services-item">
-                  <img src="assets/service-1.webp" alt="Shooting" />
+                <div class="services-item animated" data-aos="fade-up">
+                  <img src="assets/service-1.webp" alt="Shooting" loading="lazy"/>
                   <h3>SHOOTING</h3>
                   <p>
                     Crafting visual narratives with precision. From weddings to
@@ -55,8 +84,8 @@
                 </div>
               </div>
               <div class="div1">
-                <div class="services-item">
-                  <img src="assets/service-2.webp" alt="Shooting" />
+                <div class="services-item animated" data-aos="fade-up">
+                  <img src="assets/service-2.webp" alt="Shooting" loading="lazy" />
                   <h3>VIDEOS</h3>
                   <p>
                     Transforming moments into cinematic stories. From corporate
@@ -66,8 +95,8 @@
                 </div>
               </div>
               <div class="div1">
-                <div class="services-item">
-                  <img src="assets/service-3.webp" alt="Shooting" />
+                <div class="services-item animated" data-aos="fade-up">
+                  <img src="assets/service-3.webp" alt="Shooting" loading="lazy" />
                   <h3>EDITING</h3>
                   <p>
                     Elevating visuals to perfection. Expert in photo editing
@@ -79,8 +108,23 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2024 3rd Eye Filimer.</p>
+        <p><span>All rights reserved.</span></p>
+      </div>
+    </footer>  
+    <div id="customOfflineImage" class="offline-image">
+      <img src="offline-image.jpg" alt="Offline Image">
+      <p>You are offline. Check your internet connection.</p>
+    </div>
   </body>
+
+
   <script src="main.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
 </html>
