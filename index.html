@@ -16,7 +16,11 @@
     />
   </head>
   <body>
-
+      <button class="w-20 h-10 rounded-full bg-white flex items-center transition duration-300 focus:outline-none shadow" onclick="toggleTheme()">
+    <div id="switch-toggle" class="w-12 h-12 relative rounded-full transition duration-500 transform bg-yellow-500 -translate-x-2 p-1 text-white">
+      <!-- Dark mode icon will be inserted here -->
+    </div>
+  </button>
     <div class="preloader">
       <div class="lens left"></div>
       <div class="lens right"></div>
@@ -30,14 +34,6 @@
           <div></div>
           <div></div>
         </div>
-      
-        <!-- Dark mode toggle button
-        <button class="dark-mode-toggle" onclick="toggleTheme()">
-          <div id="switch-toggle" class="w-12 h-12 relative rounded-full transition duration-500 transform bg-yellow-500 -translate-x-2 p-1 text-white">
-            <!-- Dark mode icon will be inserted here -->
-          <!-- </div>
-        </button> --> 
-      
         <ul class="nav-links">
           <li class="center"><a href="#">Home</a></li>
           <li class="center"><a href="#">Portfolio</a></li>
@@ -45,7 +41,6 @@
           <li class="center"><a href="#">Feedback</a></li>
         </ul>
       </div>
-      
 
       <div class="min-container">
         <div class="main-content">
