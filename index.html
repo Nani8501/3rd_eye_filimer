@@ -19,17 +19,7 @@
     />
   </head>
   <body>
-    <button
-      class="w-20 h-10 rounded-full bg-white flex items-center transition duration-300 focus:outline-none shadow"
-      onclick="toggleTheme()"
-    >
-      <div
-        id="switch-toggle"
-        class="w-12 h-12 relative rounded-full transition duration-500 transform bg-yellow-500 -translate-x-2 p-1 text-white"
-      >
-        <!-- Dark mode icon will be inserted here -->
-      </div>
-    </button>
+    <!-- Add this within your body tag where you want the theme switch button -->
     <div class="preloader">
       <div class="lens left"></div>
       <div class="lens right"></div>
@@ -48,6 +38,19 @@
           <li class="center"><a href="#">Portfolio</a></li>
           <li class="center"><a href="#container">Services</a></li>
           <li class="center"><a href="#">Feedback</a></li>
+          <li class="center">
+            <a herf="#"
+              ><div class="theme-switch-container">
+                <label for="theme-switch" class="theme-switch">
+                  <input type="checkbox" id="theme-switch" />
+                  <div class="slider round">
+                    <div class="moon">&#9790;</div>
+                    <div class="sun">&#9728;</div>
+                  </div>
+                </label>
+              </div></a
+            >
+          </li>
         </ul>
       </div>
 
@@ -60,7 +63,7 @@
         <div class="hero">
           <div class="pic" data-aos="fade-up">
             <div class="inpic">
-              <img src="assets/profilepic.jpeg" loading="lazy" />
+              <img src="assets/snprofilepic.jpeg.png" loading="lazy" />
             </div>
           </div>
           <div class="name1" data-aos="fade-up">Sai Neeraj Namani</div>
@@ -77,6 +80,7 @@
           <div class="container" id="container">
             <div class="row">
               <div class="div1">
+                <div class="indiv">
                 <div class="services-item animated" data-aos="fade-up">
                   <img
                     src="assets/service-1.webp"
@@ -89,6 +93,7 @@
                     corporate events, let's create timeless stories through the
                     lens together.
                   </p>
+                </div>
                 </div>
               </div>
               <div class="div1">
