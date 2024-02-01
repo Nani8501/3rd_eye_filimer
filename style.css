@@ -3,18 +3,110 @@ body {
   padding: 0;
   font-family: "Poppins", sans-serif;
   transition: background 0.5s ease; /* Add transition for smooth color change */
+  color: #000000;
+  background-color: #ffffff;
 }
+.dark-mode body{
+  color: #ffffff;
+  background-color: #000;
+}
+
+/* toggle bar starts */
+/* Add this to your existing CSS or style.css file */
+
+.theme-switch-container {
+  position: fixed;
+  top: -15px;
+  border-width: thin;
+
+}
+
+.theme-switch {
+  display: inline-block;
+  position: relative;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  width: 60px;
+  height: 34px;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: background-color 0.3s;
+  border-color: #ffffff;
+  box-shadow: #ffffff;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.moon, .sun {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 50%;
+  font-size: 18px;
+  padding: 4px;
+  box-sizing: border-box;
+  
+  transition: transform 0.3s, color 0.3s;
+}
+.moon{
+transform: translateX(100%);
+}
+
+#theme-switch:checked + .slider {
+  background-color: rgb(91, 90, 90);
+}
+
+#theme-switch:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+#theme-switch:checked + .slider .moon {
+  color:black;
+}
+
+#theme-switch:checked + .slider .sun {
+  transform: translateX(00);
+  color: #fff;
+}
+
+/* toggle bar ends here */
+
+
+
 
 .main-container {
   overflow: hidden;
+  background-color: #ffffff;
 }
-
+.dark-mode .main-container{
+  background-color: #444444;
+}
 .min-container {
   margin-top: -200px;
-}
-
-.main-content {
-  display: nne; /* Initially hide the main content */
 }
 
 .preloader {
@@ -97,8 +189,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  background-image: url("assets/back.jpg");
   z-index: -2;
+}
+.dark-mode .body{
+  background-color: #333;
 }
 
 .main-container {
@@ -106,7 +200,6 @@ body {
 }
 
 .min-container {
-  margin-top: -200px;
   transition: background-color 0.5s ease; /* Add transition for smooth color change */
 }
 
@@ -122,6 +215,10 @@ body {
   padding: 100px 15px;
   overflow: hidden; /* Ensure content does not overflow */
 }
+.dark-mode .main-content{
+  color: black;
+}
+
 
 .main-content::before {
   content: "";
@@ -130,20 +227,30 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("assets/background.jpg");
+  background-image: url("assets/sai neeraj.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0% 0% 54% 46% / 90% 90% 10% 10%;
-  filter: brightness(80%) contrast(120%) saturate(120%) blur(5px);
+  filter: brightness(80%) contrast(120%) saturate(120%) blur(px);
   z-index: -1; /* Place the pseudo-element behind the content */
 }
 
+@media screen and (max-width: 768px) {
+  .main-content::before {
+    background-position: 12% center ;
+  }
+}
+
 .cont-head {
+  margin-top: 400px;
   font-size: clamp(80px, 10vw, 120px);
   font-family: "Quantico", sans-serif;
   text-shadow: 10px 10px 50px #000000, 10px 10px 50px #000000;
+}
+.dark-mode .cont-head{
+  text-shadow: 10px 10px 50px #ffffff, 10px 10px 50px #ffffff;
 }
 
 .cont-subhead {
@@ -153,22 +260,12 @@ body {
   margin-bottom: 100px;
   text-shadow: 10px 10px 50px #000000, 10px 10px 50px #000000;
 }
-
+.dark-mode .cont-subhead{
+  text-shadow: 10px 10px 50px #ffffff, 10px 10px 50px #ffffff;
+}
 /* ... (rest of your styles) ... */
 
-.cont-head {
-  padding-top: 450px;
-  font-size: clamp(80px, 10vw, 120px);
-  font-family: "Quantico", sans-serif;
-  text-shadow: 10px 10px 50px #000000, 10px 10px 50px #000000;
-}
 
-.cont-subhead {
-  font-size: 30px;
-  font-size: clamp(10px, 4vw, 40px);
-  font-family: "Kalam", sans-serif;
-  text-shadow: 10px 10px 50px #000000, 10px 10px 50px #000000;
-}
 
 /* nav bar */
 .nav {
@@ -185,6 +282,10 @@ body {
   justify-content: center;
   padding: 10px 20px; /* Adjusted padding */
 }
+.dark-mode .nav{
+  background: rgba(66, 66, 66, 0.9);
+  box-shadow: 0 5px 10px rgba(185, 184, 184, 0.2);
+}
 
 .hamburger {
   display: none;
@@ -198,6 +299,10 @@ body {
   padding-top: 8px;
   box-shadow: #ffffff;
 }
+.dark-mode .hamburger{
+  background-color: #000000;
+  box-shadow: #000;
+}
 
 .hamburger div {
   width: 30px;
@@ -205,6 +310,9 @@ body {
   background-color: #333;
   margin: 6px 0;
   transition: 0.4s;
+}
+.dark-mode .hamburger div{
+  background-color: #d3d3d3;
 }
 
 .hamburger.active div:nth-child(1) {
@@ -237,6 +345,9 @@ body {
   text-decoration: none;
   padding: 10px 15px;
   transition: background 0.3s, transform 0.3s;
+}
+.dark-mode .nav-links a{
+  color: #d4d1d1;
 }
 
 .nav-links a:hover {
@@ -271,6 +382,10 @@ body {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     z-index: 5;
   }
+  .dark-mode .nav-links{
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: rgba(255, 255, 255, 0.2);
+  }
 
   .nav-links.active {
     display: flex;
@@ -304,26 +419,27 @@ body {
 }
 
 .pic {
-  width:300px;
-  height: 300px;
+  width:350px;
+  height: 350px;
   border-radius: 37% 63% 74% 26% / 55% 43% 57% 45%;
   position: relative;
-
   background: linear-gradient(rgba(55, 0, 60, 0.5), rgba(50, 30, 200, 0.5));
 }
 .inpic{
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   overflow: hidden;
   position: relative;
   background: linear-gradient(rgba(72, 255, 161, 0.712), rgba(125, 61, 9, 0.5));
   border-radius: 72% 28% 59% 41% / 55% 72% 28% 45% ;
 }
-.pic img {
-  width: 100%;
-  height: 100%;
+.inpic img {
+  margin-top: 35px;
+  max-width: 350px;
+  height: 300px;
+  overflow: hidden;
   object-fit: cover;
-  border-radius: 37% 63% 74% 26% / 55% 43% 57% 45%;
+  border-radius: 37% 63% 44% 56% / 55% 43% 57% 45%;
 }
 
 .name1 {
@@ -331,6 +447,9 @@ body {
   font-family: "Quantico", sans-serif;
   margin-top: 20px;
   font-size: clamp(25px, 4vw, 50px);
+}
+.dark-mode .name1{
+  color: #ffffff;
 }
 
 .bio {
@@ -341,7 +460,12 @@ body {
   font-size: clamp(15px, 2vw, 30px);
   color: #000000; /* Adjusted text color to white */
 }
-
+.dark-mode .bio{
+  color: #ffffff;
+}
+.dark-mode .name1{
+  color: #ffffff;
+}
 
 /* hero section ends */
 
@@ -369,6 +493,12 @@ body {
   box-shadow: 0px 10px 25px rgba(206, 206, 206, 0.5);
   margin-bottom: 50px;
 }
+.dark-mode .services-item{
+  color: #000000;
+}
+.dark-mode .services-item p{
+  color: #000000;
+}
 
 .div1 {
   flex: 1 1 100%;
@@ -376,8 +506,17 @@ body {
   flex: 1 1 calc(33.33% - 20px);
   max-width: calc(33.33% - 20px);
   margin: 10px;
+  background-color: #ffffff;
 }
-
+.dark-mode .div1{
+  background-color: #1c1c1c;
+}
+.indiv{
+  background-color: #ffffff;
+}
+.dark-mode .indiv{
+  background-color: #444444;
+}
 .services-item img {
   width: 100%;
   height: auto;
@@ -391,9 +530,15 @@ body {
   font-size: 20px;
   font-family: Quantico;
 }
+.dark-mode .services-item h3{
+  color: #ffffff;
+} 
 
 .services-item p {
   font-family: "Oswald", sans-serif;
+}
+.dark-mode .services-item p{
+  color: #ffffff;
 }
 
 .container {
