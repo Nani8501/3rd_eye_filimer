@@ -275,16 +275,21 @@ body {
   left: 50%; /* Set left to 50% for centering */
   transform: translateX(-50%); /* Center the nav bar horizontally */
   width: calc(100% - 300px); /* Adjust width based on your margin preference */
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.432);
   z-index: 5;
   display: flex;
+  
   justify-content: center;
-  padding: 10px 20px; /* Adjusted padding */
+  padding: 10px 20px; 
+  backdrop-filter: blur( 9px );
+  -webkit-backdrop-filter: blur( 9px );
+  border: 1px solid rgba(255, 255, 255, 0.123);
+  box-shadow: 0 8px 32px 0 rgba(184, 184, 184, 0.267);
+  /* Adjusted padding */
 }
 .dark-mode .nav{
-  background: rgba(66, 66, 66, 0.9);
-  box-shadow: 0 5px 10px rgba(185, 184, 184, 0.2);
+  background: rgba(0, 0, 0, 0.432);
+  box-shadow: 0 8px 32px 0 rgba(184, 184, 184, 0.267);
 }
 
 .hamburger {
